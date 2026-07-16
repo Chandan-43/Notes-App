@@ -1,21 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notes</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <section id="home-view" class="hidden">
+      <div class="container">
         <header>
-            <h1>My Notes</h1>
+          <h1>My Notes</h1>
         </header>
         <main class="tabs">
-            <button id="permanent-btn">Permanent Notes</button>
-            <button id="temporary-btn">Temporary Notes</button>
+          <button id="permanent-btn">Permanent Notes</button>
+          <button id="temporary-btn">Temporary Notes</button>
         </main>
-    </div>
+      </div>
+    </section>
+
+
+    <section id="temporary-view" class="hidden">
+      <button id="back-btn">&#x21e6;</button>
+      <div class="container">
+        <header>
+            <h1>Temporary Notes</h1>
+        </header>
+        <main class="input-container">
+          <input type="text" id="todo-input" placeholder="Add a new task..." />
+          <button id="add-task-btn">Add Note</button>
+        </main>
+        <ul id="todo-list"></ul>
+      </div>
+    </section>
+
     <script src="script.js"></script>
-</body>
+
+  </body>
 </html>
